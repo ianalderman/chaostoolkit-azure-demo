@@ -1,5 +1,5 @@
 {
-	"name": "Container OpenHack",
+	"name": "Azure Chaos Toolkit Demo",
 	"dockerFile": "Dockerfile",
 	"mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ],
 
