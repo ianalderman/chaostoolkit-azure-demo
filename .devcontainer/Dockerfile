@@ -78,7 +78,8 @@ RUN cp -r  chaostoolkit-azure/chaosazure venvs/chaostk/lib/python3.5/site-packag
 # Download the demo setup and Experiments
 RUN git clone https://github.com/ianalderman/chaostoolkit-azure-demo.git
 
-RUN ["/bin/bash", "-c", "chown -R vscode: chaostoolkit-azure-demo"]
+#RUN ["/bin/bash", "-c", "chown -R vscode: chaostoolkit-azure-demo"]
+USER root
 RUN ["/bin/bash", "-c", "chmod -R 777 chaostoolkit-azure-demo/environmentSetup"]
 RUN ["/bin/bash", "-c", "chmod -R 777 chaostoolkit-azure-demo/experiments/webApps/configureExperiments.sh"]
 
