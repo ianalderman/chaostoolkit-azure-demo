@@ -7,5 +7,5 @@ search="replaceme"
 
 if [[ $replace != "" ]]; then
 #sed -i "s/$search/$replace/" $filename
-find . -type f -wholename "/home/vscode/chaostoolkit-azure-demo/experiments/webApps/Experiment*" -exec sed -i "s/$search/$replace/g" {} \;
+find . -type f -name "Experiment*" -exec sed -i "s/$search/$replace/g" {} \;
 fi
