@@ -11,6 +11,6 @@ The high level traffic flow can be seen in the image below:
 
 A user requests the demo website which is protected by Traffic Manager, based on the routing profile configured the User is directed to the best WebApp instance for them in either Region 1 or Region 2.  In the event that one of the Web Apps is offline the user is automatically routed to the other region.
 
-The environment setup instructions are available here: [Environment setup](https://github.com/ianalderman/chaostoolkit-azure-demo/environmentSetup/README.md) 
-Instructions for performing the experiments are here: [Experiment Instructions](https://github.com/ianalderman/chaostoolkit-azure-demo/experiments/webApps/README.md)
+The environment setup instructions are available here: [Environment setup](https://github.com/ianalderman/chaostoolkit-azure-demo/blob/master/environmentSetup/README.md) 
+Instructions for performing the experiments are here: [Experiment Instructions](https://github.com/ianalderman/chaostoolkit-azure-demo/blob/master/experiments/webApps/configureExperiments.sh)
 

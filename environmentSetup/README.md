@@ -33,5 +33,5 @@ In order to run our experiements we need to configure access for them.
 2. Verify that the credentials file has been created: `less ../credentials.json`
 3. To exit less press `q`
 
-You are good to go!  For completing the Web App Scenario experiments follow the instructions [here](https://github.com/ianalderman/chaostoolkit-azure-demo/experiments/webApps/README.md)
+You are good to go!  For completing the Web App Scenario experiments follow the instructions [here](https://github.com/ianalderman/chaostoolkit-azure-demo/blob/master/experiments/webApps/configureExperiments.sh)
 
