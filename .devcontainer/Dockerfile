@@ -78,7 +78,7 @@ USER root
 RUN ["/bin/bash", "-c", "chmod -R 777 chaostoolkit-azure-demo/environmentSetup"]
 RUN ["/bin/bash", "-c", "chmod -R 777 chaostoolkit-azure-demo/experiments/webApps/configureExperiments.sh"]
 
-ENV AZURE_AUTH_LOCATION=/home/${USERNAME}/workspace/chaostoolkit-azure-demo/credentials.json
+ENV AZURE_AUTH_LOCATION=/home/${USERNAME}/chaostoolkit-azure-demo/credentials.json
 
 WORKDIR /home/${USERNAME}
 
