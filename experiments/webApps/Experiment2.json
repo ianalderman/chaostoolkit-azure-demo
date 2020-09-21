@@ -22,7 +22,7 @@
     "method": [
         {
             "type": "action",
-            "name": "stop-webapp-region1",
+            "name": "stop-webapp-region2",
             "provider": {
                 "type": "python",
                 "module": "chaosazure.webapp.actions",
@@ -39,13 +39,13 @@
     "rollbacks": [
         {
             "type": "action",
-            "name": "start-webapp-region1",
+            "name": "start-webapp-region2",
             "provider": {
                 "type": "python",
                 "module": "chaosazure.webapp.actions",
                 "func": "start_webapp",
                 "arguments": {
-                    "filter": "where properties.resourceGroup == \"rgDemoPrimaryRegion\" and name == \"learningDayRegion1WebApp\""
+                    "filter": "where properties.resourceGroup == \"rgDemoPrimaryRegion\" and name == \"learningDayRegion2WebApp\""
                 }
             }
         }

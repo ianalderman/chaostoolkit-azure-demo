@@ -1,6 +1,7 @@
 primaryRG=rgDemoPrimaryRegion
 secondaryRG=rgDemoSecondaryRegion
 
+az login
 #Create Resource Group
 az group create --name $primaryRG --location northeurope
 #create App Service Plan
