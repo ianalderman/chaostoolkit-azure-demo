@@ -1,6 +1,6 @@
 {
     "version": "1.0.0",
-    "title": "What is the impact if a Web App is lost behind a load balancer in our primary region?",
+    "title": "What is the impact if a Web App is lost behind a Traffic Manager in our primary region?",
     "description": "The loss of a single Web App should not affect our availability",
     "tags": ["demo"],
     "steady-state-hypothesis": {

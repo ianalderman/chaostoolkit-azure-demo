@@ -1,7 +1,7 @@
 {
     "version": "1.0.0",
-    "title": "What is the impact if a Web App is lost behind Traffic Manager in our secondary region?",
-    "description": "The loss of a single Web App should not affect our availability",
+    "title": "What is the impact if a Web App is lost behind both regions?",
+    "description": "The loss of a both regions should cause our site to fail..",
     "tags": ["demo"],
     "steady-state-hypothesis": {
         "title": "Application responds",
@@ -20,6 +20,21 @@
         ]
     },
     "method": [
+        {
+            "type": "action",
+            "name": "stop-webapp-region1",
+            "provider": {
+                "type": "python",
+                "module": "chaosazure.webapp.actions",
+                "arguments": {
+                        "filter": "where properties.resourceGroup == \"rgDemoPrimaryRegion\" and name == \"learningDayRegion1WebApp\""
+                },
+                "func": "stop_webapp"                
+            },
+            "pauses": {
+                "after": 30
+            }
+        },
         {
             "type": "action",
             "name": "stop-webapp-region2",
@@ -47,6 +62,21 @@
                 "arguments": {
                     "filter": "where properties.resourceGroup == \"rgDemoPrimaryRegion\" and name == \"learningDayRegion2WebApp\""
                 }
+            }
+        },
+        {
+            "type": "action",
+            "name": "start-webapp-region1",
+            "provider": {
+                "type": "python",
+                "module": "chaosazure.webapp.actions",
+                "arguments": {
+                        "filter": "where properties.resourceGroup == \"rgDemoPrimaryRegion\" and name == \"learningDayRegion1WebApp\""
+                },
+                "func": "start_webapp"                
+            },
+            "pauses": {
+                "after": 30
             }
         }
     ]

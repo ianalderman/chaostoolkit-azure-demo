@@ -62,12 +62,8 @@ WORKDIR /home/${USERNAME}
 RUN mkdir venvs
 RUN python3 -m venv venvs/chaostk
 
-# Activate our clean environment
+# Activate our clean environment and Install Chaos Toolkit and the Azure Drivers
 RUN ["/bin/bash", "-c", "source venvs/chaostk/bin/activate && pip3 install wheel && pip3 install -U chaostoolkit && pip3 install -U chaostoolkit-azure"]
-
-# Install Chaos Toolkit and the Azure Drivers
-#RUN ["/bin/bash", "-c", "pip3 install -U chaostoolkit"]
-#RUN ["/bin/bash", "-c", "pip3 install -U chaostoolkit-azure"]
 
 # There are a couple of bugs this fork contains some fixes
 RUN git clone -b webapp_init_client_mangement https://github.com/ianalderman/chaostoolkit-azure.git
@@ -78,12 +74,11 @@ RUN cp -r  chaostoolkit-azure/chaosazure venvs/chaostk/lib/python3.5/site-packag
 # Download the demo setup and Experiments
 RUN git clone https://github.com/ianalderman/chaostoolkit-azure-demo.git
 
-#RUN ["/bin/bash", "-c", "chown -R vscode: chaostoolkit-azure-demo"]
 USER root
 RUN ["/bin/bash", "-c", "chmod -R 777 chaostoolkit-azure-demo/environmentSetup"]
 RUN ["/bin/bash", "-c", "chmod -R 777 chaostoolkit-azure-demo/experiments/webApps/configureExperiments.sh"]
 
-ENV AZURE_AUTH_LOCATION=/home/${USERNAME}/chaostoolkit-azure-demo/credentials.json
+ENV AZURE_AUTH_LOCATION=/home/${USERNAME}/workspace/chaostoolkit-azure-demo/credentials.json
 
 WORKDIR /home/${USERNAME}
 

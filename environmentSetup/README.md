@@ -29,8 +29,8 @@ environmentSetup/buildWebAppDemo.sh
 
 In order to run our experiements we need to configure access for them.
 
-1. Execute the command (you may be asked to sign in): `./configureCredentials.sh`
-2. Verify that the credentials file has been created: `less ../credentials.json`
+1. Execute the command (you may be asked to sign in): `environmentSetup/configureCredentials.sh`
+2. Verify that the credentials file has been created: `less credentials.json`
 3. To exit less press `q`
 
 You are good to go!  For completing the Web App Scenario experiments follow the instructions [here](https://github.com/ianalderman/chaostoolkit-azure-demo/blob/master/experiments/webApps/README.md)
