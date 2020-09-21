@@ -17,7 +17,10 @@
 
 1. Once your codepsace has loaded from the menu icon in the top left of the screen select *Terminal -> New Terminal*
 2. Due to an issue in our current codespaces setup run the following command (which will enable us to execute the scripts we need): 
-`sudo chmod +x environmentSetup/*.sh`
+`
+cd ~/chaostoolkit-azure-demo
+sudo chmod +x environmentSetup/*.sh
+`
 3. Now we need to build out the sample Web App (you may be asked to sign in):
 `
 environmentSetup/buildWebAppDemo.sh
