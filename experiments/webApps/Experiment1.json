@@ -14,7 +14,7 @@
                     "type": "http",
                     "timeout": 3,
                     "verify_tls": false,
-                    "url": "http://replaceme"
+                    "url": "http://replaceme.trafficmanager.net"
                 }
             }
         ]
@@ -27,7 +27,7 @@
                 "type": "python",
                 "module": "chaosazure.webapp.actions",
                 "arguments": {
-                        "filter": "where properties.resourceGroup == \"rgDemoPrimaryRegion\" and name == \"learningDayRegion1WebApp\""
+                        "filter": "where properties.resourceGroup == \"rgDemoPrimaryRegion\" and name == \"learningDayRegion1WebApp-replaceme\""
                 },
                 "func": "stop_webapp"                
             },
@@ -45,7 +45,7 @@
                 "module": "chaosazure.webapp.actions",
                 "func": "start_webapp",
                 "arguments": {
-                    "filter": "where properties.resourceGroup == \"rgDemoPrimaryRegion\" and name == \"learningDayRegion1WebApp\""
+                    "filter": "where properties.resourceGroup == \"rgDemoPrimaryRegion\" and name == \"learningDayRegion1WebApp-replaceme\""
                 }
             }
         }
