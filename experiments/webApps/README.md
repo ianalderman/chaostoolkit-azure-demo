@@ -17,6 +17,8 @@ Now it is time to test our hypotheses and inject some chaos into our system!
 
 1. We need to switch to our testing environment run the following command: `source /home/vscode/venvs/chaostk/bin/activate`
 
+*N.B. In testing we noted rare instances where the steady state probe fails to connect to the website, disabling and re-enabling the Traffic Manager Profile fixed this*
+
 ### Experiment 1 ###
 In our first experiment we will stop the Web App running in Region 1 and confirm that the website behind Traffic Manager still works.  Execute the command below to run the experiment: `chaos run Experiment1.json`
 
