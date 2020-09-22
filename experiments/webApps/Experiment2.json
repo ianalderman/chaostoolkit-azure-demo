@@ -45,7 +45,7 @@
                 "module": "chaosazure.webapp.actions",
                 "func": "start_webapp",
                 "arguments": {
-                    "filter": "where properties.resourceGroup == \"rgDemoPrimaryRegion\" and name == \"learningDayRegion2WebApp-replaceme\""
+                    "filter": "where properties.resourceGroup == \"rgDemoSecondaryRegion\" and name == \"learningDayRegion2WebApp-replaceme\""
                 }
             }
         }

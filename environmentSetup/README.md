@@ -18,7 +18,6 @@
 1. Once your codepsace has loaded from the menu icon in the top left of the screen select *Terminal -> New Terminal*
 2. Due to an issue in our current codespaces setup run the following command (which will enable us to execute the scripts we need): 
 `
-cd ~/chaostoolkit-azure-demo
 sudo chmod +x environmentSetup/*.sh
 `
 3. Now we need to build out the sample Web App (you may be asked to sign in):
@@ -33,7 +32,7 @@ environmentSetup/buildWebAppDemo.sh
 In order to run our experiements we need to configure access for them.
 
 1. Execute the command (you may be asked to sign in): `environmentSetup/configureCredentials.sh`
-2. Verify that the credentials file has been created: `less credentials.json`
+2. Verify that the credentials file has been created: `less /home/vscode/chaostoolkit-azure-demo/credentials.json`
 3. To exit less press `q`
 
 You are good to go!  For completing the Web App Scenario experiments follow the instructions [here](https://github.com/ianalderman/chaostoolkit-azure-demo/blob/master/experiments/webApps/README.md)

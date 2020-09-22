@@ -7,7 +7,7 @@ Before we can run our experiments we need to update our WebApp experiments with 
 2. Due to an issue in our current codespaces setup run the following command (which will enable us to execute the scripts we need): 
 `sudo chmod +x *.sh`
 3. Execute the *configureExperiments.sh* script.  In the container: `./configureExperiments.sh`
-4. At the prompt enter the Traffic manager address from the [*Environment setup*](https://github.com/ianalderman/chaostoolkit-azure-demo/blob/master/environmentSetup/README.md) steps.  **N.B DO NOT INCLUDE THE HTTP://**, e.g., for **http://example.trafficmanger.net** enter `example.trafficmanager.net`
+4. At the prompt enter the Traffic manager address from the [*Environment setup*](https://github.com/ianalderman/chaostoolkit-azure-demo/blob/master/environmentSetup/README.md) steps.  **N.B DO NOT INCLUDE THE HTTP://**, e.g., for **http://example.trafficmanger.net** enter `example`
 5. Let's check that the script has updated as we would expect.  Type `less Experiment1.json`, you should see a `probe` called *we-can-request-hello-world-site* and under that you should see `"url":"..` that hopefully has your traffic manager address.  You may need to press *space bar* to scroll down.  Again press *q* to quit
 
 ## Test our hypotheses ##
