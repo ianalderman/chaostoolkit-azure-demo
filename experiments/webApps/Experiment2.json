@@ -32,7 +32,7 @@
                 "func": "stop_webapp"                
             },
             "pauses": {
-                "after": 30
+                "after": 45
             }
         }
     ],
