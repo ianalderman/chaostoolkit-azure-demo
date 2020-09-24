@@ -1,0 +1,53 @@
+{
+    "version": "1.0.0",
+    "title": "What is the impact if a Web App is lost behind a Traffic Manager in our primary region?",
+    "description": "The loss of a single Web App should not affect our availability",
+    "tags": ["demo"],
+    "steady-state-hypothesis": {
+        "title": "Application responds",
+        "probes": [
+            {
+                "type": "probe",
+                "name": "we-can-request-hello-world-site",
+                "tolerance": 200,
+                "provider": {
+                    "type": "http",
+                    "timeout": 3,
+                    "verify_tls": false,
+                    "url": "http://replaceme.azurefd.net"
+                }
+            }
+        ]
+    },
+    "method": [
+        {
+            "type": "action",
+            "name": "stop-webapp-region1",
+            "provider": {
+                "type": "python",
+                "module": "chaosazure.webapp.actions",
+                "arguments": {
+                        "filter": "where properties.resourceGroup == \"rgDemoPrimaryRegion\" and name == \"learningDayRegion1WebApp-replaceme\""
+                },
+                "func": "stop_webapp"                
+            },
+            "pauses": {
+                "after": 45
+            }
+        }
+    ],
+    "rollbacks": [
+        {
+            "type": "action",
+            "name": "start-webapp-region1",
+            "provider": {
+                "type": "python",
+                "module": "chaosazure.webapp.actions",
+                "func": "start_webapp",
+                "arguments": {
+                    "filter": "where properties.resourceGroup == \"rgDemoPrimaryRegion\" and name == \"learningDayRegion1WebApp-replaceme\""
+                }
+            }
+        }
+    ]
+}
