@@ -30,7 +30,7 @@ Assuming that is successful we then move on to introducing some chaos into our s
 In our second experiment we will stop the Web App running in Region 2 and confirm that the website behind Traffic Manager still works.  Execute the command below to run the experiment: `chaos run Experiment2.json`
 
 ### Experiment 3 ###
-In our second experiment we will stop the Web App running in both Regions 1 & 2 and confirm that the website behind Traffic Manager is no longer available.  Execute the command below to run the experiment: `chaos run Experiment3.json`
+In our third experiment we will stop the Web App running in both Regions 1 & 2 and confirm that the website behind Traffic Manager is no longer available.  Execute the command below to run the experiment: `chaos run Experiment3.json`
 
 *N.B. This experiment should fail - we have taken both regions offline*
 
