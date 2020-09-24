@@ -60,7 +60,7 @@ az extension add --name front-door
 az network front-door create -g $primaryRG -n $afdName --backend-address "${primaryAppName}.azurewebsites.net" --interval 5 --protocol http 
 
 # Update Load Balancing rule for AFD to fail-over quicker and set the latency threshold to high enough so it will use both back-ends
-az network front-door load-balancing create -g $primaryRG -f $afdName -n DefaultLoadBalancingSettings --sample-size 1 --successful-samples-required 1 --additional-latency 2000
+az network front-door load-balancing create -g $primaryRG -f $afdName -n DefaultLoadBalancingSettings --sample-size 1 --successful-samples-required 1 --additional-latency 1000
 
 # Add the 2nd Region to the back-end pool 
 az network front-door backend-pool backend add -g $primaryRG -f $afdName --pool-name DefaultBackendPool --address "${secondaryAppName}.azurewebsites.net"
