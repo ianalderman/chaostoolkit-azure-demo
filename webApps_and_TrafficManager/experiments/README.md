@@ -1,13 +1,13 @@
 # Run Experiments #
 
 ## Configure WebApp Experiments ###
-Before we can run our experiments we need to update our WebApp experiments with the unique name assigned to our website for this demo.  In the [*Environment setup*](https://github.com/ianalderman/chaostoolkit-azure-demo/blob/master/webApps_and_TraffcManager/environmentSetup/README.md) stage you should have made note of your traffic manager address.
+Before we can run our experiments we need to update our WebApp experiments with the unique name assigned to our website for this demo.  In the [*Environment setup*](https://github.com/ianalderman/chaostoolkit-azure-demo/blob/master/webApps_and_TrafficManager/environmentSetup/README.md) stage you should have made note of your traffic manager address.
 
 1. Change to the *experiments/webApps* directory.  In the contianer: `cd ~/chaostoolkit-azure-demo/experiments/webApps`
 2. Due to an issue in our current codespaces setup run the following command again - this time for the Experiments (which will enable us to execute the scripts we need): 
 `sudo chmod +x *.sh`
 3. Execute the *configureExperiments.sh* script.  In the container: `./configureExperiments.sh`
-4. At the prompt enter the unique name from the [*Environment setup*](https://github.com/ianalderman/chaostoolkit-azure-demo/blob/master/webApps_and_TraffcManager/environmentSetup/README.md) steps.  As a reminder of your unique name, if your test address was **http://example.trafficmanger.net** enter `example`
+4. At the prompt enter the unique name from the [*Environment setup*](https://github.com/ianalderman/chaostoolkit-azure-demo/blob/master/webApps_and_TrafficManager/environmentSetup/README.md) steps.  As a reminder of your unique name, if your test address was **http://example.trafficmanger.net** enter `example`
 5. Let's check that the script has updated as we would expect.  Type `less Experiment1.json`, you should see a `probe` called *we-can-request-hello-world-site* and under that you should see `"url":"..` that hopefully has your traffic manager address.  You may need to press *space bar* to scroll down.  Again press *q* to quit
 
 ## Test our hypotheses ##
