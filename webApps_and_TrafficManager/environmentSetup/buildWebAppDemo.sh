@@ -14,7 +14,7 @@ az group create --name $primaryRG --location northeurope
 az appservice plan create -n MyPlan -g $primaryRG --sku S1
 #Create a Web App and link to GitHub Repo
 
-az webapp create -g $primaryRG -p MyPlan -n $primaryAppName --runtime "node|10.14" --deployment-source-url https://github.com/ianalderman/helloworldhtml
+az webapp create -g $primaryRG -p MyPlan -n $primaryAppName --runtime "node|10.14" --deployment-source-url https://github.com/ianalderman/helloworldnodejs
 
 
 az network traffic-manager profile create -g $primaryRG -n MyTmProfile --routing-method Performance \
@@ -30,7 +30,7 @@ az group create --name $secondaryRG --location westeurope
 #create App Service Plan
 az appservice plan create -n MyPlan -g $secondaryRG --sku S1
 #Create a Web App and link to GitHub Repo
-az webapp create -g $secondaryRG -p MyPlan -n $secondaryAppName --runtime "node|10.14" --deployment-source-url https://github.com/ianalderman/helloworldhtml
+az webapp create -g $secondaryRG -p MyPlan -n $secondaryAppName --runtime "node|10.14" --deployment-source-url https://github.com/ianalderman/helloworldnodejs
 
 MyWebApp2Id=$(az webapp show -g $secondaryRG -n $secondaryAppName --query [id] --output tsv)
 
