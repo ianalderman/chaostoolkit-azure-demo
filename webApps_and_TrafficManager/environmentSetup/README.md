@@ -39,8 +39,7 @@ environmentSetup/buildWebAppDemo.sh
 
 In order to run our experiements we need to configure access for them.
 
-1. Execute the command (you may be asked to sign in): `environmentSetup/configureCredentials.sh`
-2. Verify that the credentials file has been created: `less /home/vscode/chaostoolkit-azure-demo/credentials.json` you should see something along the lines of:  
+1. Verify that the credentials file has been created: `less /home/vscode/chaostoolkit-azure-demo/credentials.json` you should see something along the lines of:  
 `
 {  
   "clientId": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",

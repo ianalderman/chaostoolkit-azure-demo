@@ -75,8 +75,8 @@ RUN cp -r  chaostoolkit-azure/chaosazure venvs/chaostk/lib/python3.5/site-packag
 RUN git clone https://github.com/ianalderman/chaostoolkit-azure-demo.git
 
 USER root
-RUN ["/bin/bash", "-c", "chmod -R 777 chaostoolkit-azure-demo/environmentSetup"]
-RUN ["/bin/bash", "-c", "chmod -R 777 chaostoolkit-azure-demo/experiments/webApps/configureExperiments.sh"]
+#RUN ["/bin/bash", "-c", "chmod -R 777 chaostoolkit-azure-demo/environmentSetup"]
+#RUN ["/bin/bash", "-c", "chmod -R 777 chaostoolkit-azure-demo/experiments/webApps/configureExperiments.sh"]
 
 ENV AZURE_AUTH_LOCATION=/home/${USERNAME}/chaostoolkit-azure-demo/credentials.json
 

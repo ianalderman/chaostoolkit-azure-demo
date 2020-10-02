@@ -34,7 +34,9 @@ In our second experiment we will stop the Web App running in both Regions 1 & 2 
 
 *N.B. This experiment should fail - we have taken both regions offline*
 
-**When you have finsihed don't forget to delete the resources you created!!!**
+## Clean up ##
+When you have finished and want to clear down the environment run the following command:  
+`../environmentSetup/cleanup.sh`
 
 ## Interested in learning more? ##
 
